@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple A/B Testing</title>
+    <script>
+      function redirectToABVersion() {
+        console.log('Inside redirectToABVersion function');
+
+        const versionA = 'indexa.html';
+        const versionB = 'indexb.html';
+
+        const randomNum = Math.random();
+
+        if (randomNum < 0.5) {
+          window.location.href = versionA;
+        } else {
+          window.location.href = versionB;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      redirectToABVersion();
+    </script>
+  </body>
+</html>
